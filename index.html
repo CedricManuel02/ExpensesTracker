@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <title>Expenses Tracker</title>
+</head>
+<body>
+    <main class="font-sans p-0 m-0 h-screen w-full bg-slate-100 flex items-center justify-center">
+        <section class="block max-w-md w-10/12 max-h-4/5 h-auto py-8 rounded-md bg-white shadow" id="formOne">
+            <header class="w-10/12 m-auto py-3">
+                <h3 class="font-bold text-slate-600 text-lg">Expense Tracker</h3>
+            </header>
+            <div class="flex w-10/12 m-auto py-3 justify-between items-end border-b-2 border-violet-100">
+                <div class="flex flex-col">
+                    <small class="text-md text-violet-500 font-medium">Balance</small>
+                    <h3 class="text-3xl text-slate-600 font-medium" id="balance">0</h3>
+                    <small class="text-md text-violet-400 text-sm font-medium" id="description"></small>
+                </div>
+                <ion-icon class="text-3xl text-violet-500 cursor-pointer hover:text-violet-400" name="add-circle" id="addMoney"></ion-icon>
+            </div>
+            <div class="w-10/12 m-auto py-5">
+                    <small class="text-md text-violet-500 font-medium">History</small>
+                    <div class="flex flex-col-reverse" id="list">
+                       
+                    </div>
+            </div>
+            <div class="flex items-center justify-center">
+                <button class="w-10/12 bg-violet-500 text-white p-2 rounded-md" type="button" id="addExpenses">Add Expense</button>
+            </div>
+        </section>
+        <section class="hidden max-w-md w-10/12 max-h-4/5 h-auto py-8 rounded-md bg-white shadow" id="formTwo">
+            <header class="w-10/12 m-auto py-3">
+                <h3 class="font-bold text-slate-600 text-lg">Expense Tracker</h3>
+            </header>
+            <div class="flex flex-col w-10/12 m-auto py-2 gap-3">
+                <small class="text-md text-violet-500 font-medium">Add Money</small>
+                <input class="appearance-none border-2 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="number" placeholder="Amount" id="amountMoney"/>
+                <textarea class="appearance-none border-2 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Add description" id="descriptionMoney"></textarea>
+            </div>
+            <div class="w-10/12 m-auto flex items-center gap-3 py-2 justify-end">
+                <button class="w-auto text-violet-500 p-2 rounded-md" type="button" id="cancelMoney">Cancel</button>
+                <button class="w-auto bg-violet-500 text-white p-2 rounded-md" type="button" id="submitMoney">Submit</button>
+            </div>
+        </section>
+        <section class="hidden max-w-md w-10/12 max-h-4/5 h-auto py-8 rounded-md bg-white shadow" id="formThree">
+            <header class="w-10/12 m-auto py-3">
+                <h3 class="font-bold text-slate-600 text-lg">Expense Tracker</h3>
+            </header>
+            <div class="flex flex-col w-10/12 m-auto py-2 gap-3">
+                <small class="text-md text-violet-500 font-medium">Add Expense</small>
+                <input class="appearance-none border-2 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="number" placeholder="Amount" id="amountExpense"/>
+                <textarea class="appearance-none border-2 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Add description" id="descriptionExpense"></textarea>
+            </div>
+            <div class="w-10/12 m-auto flex items-center gap-3 py-2 justify-end">
+                <button class="w-auto text-violet-500 p-2 rounded-md" type="button" id="cancelExpense">Cancel</button>
+                <button class="w-auto bg-violet-500 text-white p-2 rounded-md" type="button" id="submitExpense">Submit</button>
+            </div>
+        </section>
+    </main>
+    <script src="/script.js"></script>
+</body>
+
+</html>
